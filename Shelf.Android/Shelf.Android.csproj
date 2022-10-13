@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\pc\reverse_engineering\com.companyname.Shelf\assemblies\Shelf.Android.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22FA7E21-0717-4128-A892-4566F6F4B2A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Shelf.Android</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <ApplicationVersion>2021.3.19.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="PCLStorage">
+      <HintPath>lib\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Shelf">
+      <HintPath>lib\Shelf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NativeHelper.cs" />
+    <Compile Include="Xam\Plugin\AutoUpdate\Droid\PlayStoreOpener.cs" />
+    <Compile Include="Xam\Plugin\AutoUpdate\Droid\FileOpener.cs" />
+    <Compile Include="Xam\Plugin\AutoUpdate\Droid\AutoUpdate.cs" />
+    <Compile Include="PDFPrintingSample\Droid\CustomPrintDocumentAdapter.cs" />
+    <Compile Include="Shelf\Droid\MainActivity.cs" />
+    <Compile Include="Shelf\Droid\Resource.cs" />
+    <Compile Include="Shelf\Droid\Helpers\GlobalMobAnd.cs" />
+    <Compile Include="Shelf\Droid\Helpers\MobilePrinter\MyHandler.cs" />
+    <Compile Include="Shelf\Droid\Helpers\MobilePrinter\Bixolon.cs" />
+    <Compile Include="Shelf\Droid\Helpers\MobilePrinter\Sewoo.cs" />
+    <Compile Include="XFNoSoftKeyboadEntryControl\Droid\SoftkeyboardDisabledEntryRenderer.cs" />
+    <Compile Include="AndroidAppNamespace\Effects\AndroidLongPressedEffect.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
